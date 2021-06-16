@@ -30,7 +30,7 @@
 	
 	#contentWrap {
 		position: relative;
-		width: 1366px;
+		width: 1200px;
 		margin: 0 auto;
 	}
 	
@@ -75,11 +75,11 @@
 		margin-top: 10px;
 	}
 	
-	input, select {
+	input, .select1 {
 		border: 1px solid #e0e0e0;
 	}
 	
-	button, input, select, textarea, a {
+	button, input, select1, textarea, a {
 		vertical-align: middle;
 	}
 	
@@ -164,24 +164,24 @@
 		display: table-column;
 	}
 	
-	thead {
+	.thead1 {
 		display: table-header-group;
 		vertical-align: middle;
 		border-color: inherit;
 	}
 	
-	tr {
+	.tr1 {
 		display: table-row;
 		vertical-align: inherit;
 		border-color: inherit;
 	}
 	
-	td {
+	.td1 {
 		display: table-cell;
 		vertical-align: inherit;
 	}
 	
-	tbody {
+	.tbody1 {
 		display: table-row-group;
 		vertical-align: middle;
 		border-color: inherit;
@@ -335,7 +335,7 @@
 		border: 1px solid #ddd;
 	}
 	
-	#order select {
+	#order .select1 {
 		height: 32px;
 		line-height: 32px;
 		border: 1px solid #ddd;
@@ -439,7 +439,7 @@
 		border: 1px solid #ddd;
 	}
 			
-	strong {
+	.strong1 {
 		font-weight: bold;
 	}
 	
@@ -456,17 +456,17 @@
 	}
 	
 	
-	select {
+	.select1 {
 		width: 50px;
 		height: 32px;
 		line-height: 32px;
 	}
 	
-	input, select {
+	input, .select1 {
 		border: 1px solid #e0e0e0;
 	}
 	
-	option {
+	.option1 {
 		font-weight: normal;
 		display: block;
 		white-space: nowrap;
@@ -474,13 +474,13 @@
 		padding: 0px 2px 1px;
 	}
 	
-	tbody {
+	.tbody1 {
 		display: table-row-group;
 		vertical-align: middle;
 		border-color: inherit;
 	}
 	
-	fieldset {
+	.fieldset1 {
 		display: block;
 		margin-inline-start: 2px;
 		margin-inline-end: 2px;
@@ -491,7 +491,7 @@
 		min-inline-size: min-content;
 	}
 	
-	table {
+	.table1 {
 		display: table;
 		box-sizing: border-box;
 		text-indent: initial;
@@ -510,11 +510,11 @@
 		width: 150px;
 	}
 	
-	li {
+	.li1 {
 		list-style: none;
 	}
 	
-	ul {
+	.ul1 {
 		display: block;
 		list-style-type: disc;
 		margin-block-start: 1em;
@@ -524,7 +524,7 @@
 		padding-inline-start: 40px;
 	}
 	
-	select {
+	.select1 {
 		-webkit-writing-mode: horizontal-tb !important;
 		text-rendering: auto;
 		letter-spacing: normal;
@@ -634,14 +634,14 @@
 								<div class="tbl-order">
 									<h3 class="tit-cart2">주문자정보</h3>
 									<div class="tbl-order">
-										<table>
+										<table class="tbale1">
 											<caption>주문자정보</caption>
 											<colgroup>
 												<col style="width: 150px;">
 												<col>
 											</colgroup>
-											<tbody>
-												<tr>
+											<tbody class="tbody1">
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">이름</div>
 													</th>
@@ -649,17 +649,17 @@
 														<input type="hidden" name="sender" form="order_form" id="sender" class="MS_input_txt" value>
 													</td>													
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">이메일</div>
 													</th>
-													<td>
+													<td class="td1">
 														<input type="hidden" name="oldemail" id="oldemail" value>
 														<input type="hidden" name="email1" id="email1" value>
 														<input type="text" name="email1" id="email1" class="MS_input_txt" maxlength="20" form="order_form">
 														<span>@</span>
 														<span id="direct_eamil" style="margin-top:3px; display:inline-block">
-															<input type="text" name="email3" id="email3" value="" class="MS_input_txt" maxlength="25" form="order_form" disabled>
+															<input type="text" name="email3" id="email3" value="" class="MS_input_txt" maxlength="25" form="order_form">
 														</span>
 														<select name="emailsel" id="emailsel" class="MS_select MS_email" style="margin-right:5px;" onchange="viewdirect()">
 															<option value="direct">직접입력</option>
@@ -672,11 +672,11 @@
 														</select>
 													</td>
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">연락처</div>
 													</th>
-													<td>
+													<td class="td1">
 														<select name="emergency11" form="order_form" id="emergency11" class="MS_select MS_tel">
 															<option value>선택</option>
 															<option value="010">010</option>
@@ -712,7 +712,7 @@
 										</label>
 									</h3>
 									<div class="tbl-order">
-										<table>
+										<table class="table1">
 											<caption>배송 정보 입력</caption>
 											<colgroup>
 												<col style="width: 150px">
@@ -720,8 +720,8 @@
 												<col style="width: 150px">
 												<col>
 											</colgroup>
-											<tbody>
-												<tr>
+											<tbody class="tbody1">
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">이름</div>
 													</th>
@@ -729,11 +729,11 @@
 														<input type="text" name="receiver" form="order_form" id="receiver" class="MS_input_txt" value>
 													</td>
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">연락처 1</div>
 													</th>
-													<td>
+													<td class="td1">
 														<select name="emergency21" form="order_form" id="emergency21" class="MS_select MS_tel">
 															<option value>선택</option>
 															<option value="010">010</option>
@@ -776,7 +776,7 @@
 														<input type="text" name="emergency33" form="order_form" id="emergency33" size="4" maxlength="4" minlength="4" class="MS_input_txt w60" value>
 													</td>
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">배송지 선택</div>
 													</th>
@@ -790,7 +790,7 @@
 														<a href="javascript:pop past delivery();" class="CSSbuttonGray">최근 배송지</a>
 													</td>
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">주소</div>
 													</th>
@@ -808,7 +808,7 @@
 														</div>
 													</td>
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">
 															주문메시지
@@ -821,7 +821,7 @@
 														</textarea>
 													</td>
 												</tr>
-												<tr>
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">무통장 입금자명</div>
 													</th>
@@ -839,7 +839,7 @@
 									</label>
 									<h3 class="tit-cart2">주문상품 할인적용</h3>
 									<div class="tbl-pay">
-										<table>
+										<table class="table1">
 											<caption>주문상품 할인적용</caption>
 											<colgroup>
 												<col style="width: 20%">
@@ -848,7 +848,7 @@
 												<col style="width: 20%">
 												<col style="width: 20%">												
 											</colgroup>
-											<thead>
+											<thead class="thead1">
 												<tr>
 													<th scope="col">상품금액</th>
 													<th scope="col">배송비</th>
@@ -856,10 +856,10 @@
 													<th scope="col">추가금액</th>
 													<th scope="col">결제 예정금액</th>													
 												</tr>
-												<tr>
-													<td>
+												<tr class="tr1">
+													<td class="tr1">
 														<div class="base">
-															<strong>
+															<strong class="strong1">
 																<em>
 																	<span class="op-total block-op-product-price" price="28900">28,900</span>
 																</em>
@@ -867,59 +867,59 @@
 															</strong>										
 														</div>
 													</td>
-													<td>
+													<td class="td1">
 														<div class="base">
-															<strong>
+															<strong class="strong1">
 																<em>
 																	<span class="op-total block-op-delivery-price" price="2500">2,500</span>
 																</em>
 																<span id="block_op_delivery_unit">원</span>
 															</strong>
 															<a class="plus">
-																<img srt="+(더하기) 이미지 링크" alt="plus">
+																<img srt="img/더하기.jpg" alt="plus">
 															</a>
 															<a class="minus" style="display: none;">
-																<img src="-(빼기) 이미지 링크" alt="minus">
+																<img src="img/빼기.jpg" alt="minus">
 														</div>
 													</td>
-													<td>
+													<td class="td1">
 														<div class="base">
-															<strong>
+															<strong class="strong1">
 																<em class="fc-red">
 																	<span class="op-total block-op-sale-price" price="-0">0</span>
 																</em>
 																원
 															</strong>
 															<a class="pluc" style="display: none;">
-																<img srt="+(더하기) 이미지 링크" alt="plus">
+																<img src="img/더하기.jpg" alt="plus" style="width: 10px; height: 10;">
 															</a>
 															<a class="minus">
-																<img src="-(빼기) 이미지 링크" alt="minus">
+																<img src="img/빼기.jpg" alt="minus" style="width: 10px; height: 10;">
 															</a>
 														</div>
 													</td>
-													<td>
+													<td class="td1">
 														<div class="base">
-															<strong>
+															<strong class="strong1">
 																<em>
 																	<span class="op-total block-op-add-price" price="0">0</span>
 																</em>
 																원
 															</strong>
 															<a class="plus">
-																<img srt="+(더하기) 이미지 링크" alt="plus">
+																<img srt="img/더하기.jpg" alt="plus" style="width: 10px; height: 10;">
 															</a>
 															<a class="minus" style="display: none;">
-																<img src="-(빼기) 이미지 링크" alt="minus">
+																<img src="img/빼기.jpg" alt="minus" style="width: 10px; height: 10;">
 															</a>
 														</div>
 													</td>
-													<td>
+													<td class="td1">
 														<div class="base">
 															<a class="equal">
-																<img src="= 이미지 링크" alt="equal">
+																=
 															</a>
-															<strong>
+															<strong class="strong1">
 																<em class="fc-red">
 																	<span class="block-op-sum-price" price="31400">31,400</span>
 																</em>
@@ -929,8 +929,8 @@
 													</td>													
 												</tr>
 											</thead>
-											<tbody>
-												<tr>
+											<tbody class="tbody1">
+												<tr class="tr1">
 													<th class="txt-c">쿠폰</th>
 													<td colspan="4">
 														<input type="text" name="couponnum" form="order_form" id="couponnum" class="MS_input_txt" readonly>
@@ -949,41 +949,41 @@
 												<col style="width: 150px">
 												<col>
 											</colgroup>
-											<tbody>
-												<tr>
+											<tbody class="tbody1">
+												<tr class="tr1">
 													<th scope="row">
 														<div class="txt-l">결제방법</div>
 													</th>
-													<td>
+													<td class="td1">
 														<ul class="pay-method">
-															<li>
+															<li class="li1">
 																<input type="radio" class="chk-rdo" name="radio_paymethod" value="SMILEPAY" checked="checked">
 																스마일페이
 																<em>
 																	<span class="op-card-dc-price fc-red"></span>
 																</em>
 															</li>
-															<li>
+															<li class="li1">
 																<input type="radio" class="chk-rdo" name="radio_paymethod" value="PAYCO">
 																 페이코(PAYCO) 
 																<em>
 																	<span class="op-card-dc-price fc-red"></span>
 																</em>
 															</li>
-															<li>
+															<li class="li1">
 																<input type="radio" class="chk-rdo" name="radio_paymethod" value="C">
 																 신용카드 
 																<em>
 																	<span class="op-card-dc-price fc-red"></span>
 																</em>
 															</li>
-															<li>
+															<li class="li1">
 																<input type="radio" class="chk-rdo" name="radio_paymethod" value="B">
 																무통장입금
 																<em>
 																	<span class="op-bank-dc-price fc-red"></span>
 																</em>
-																<select name="pay_data" class="w280 MK_bank_select_list MK_pay_add_choice" disabled>
+																<select class="select1" name="pay_data" class="w280 MK_bank_select_list MK_pay_add_choice">
 																	<option value>입금 계좌번호 선택(반드시 주문자 성함으로 입금)</option>
 																	<option value="농협중앙회 100055505005214 (예금주:모두의 레시피)">농협중앙회 100055505005214 (예금주:모두의 레시피)</option>
 																	<option value="국민은행 595101472215 (예금주:모두의 레시피)">국민은행 595101472215 (예금주:모두의 레시피)</option>
@@ -1000,15 +1000,15 @@
 									<div class="lst-order" style="display: block;">
 										<h3 class="tit-cart2">주문자동의</h3>
 									</div>
-									<div clas="tbl-order">
-										<table>
+									<div class="tbl-order">
+										<table class="table1">
 											<caption>주문자 동의</caption>
 											<colgroup>
 												<col style="width: 150px">
 												<col>
 											</colgroup>
-											<tbody>
-												<tr>
+											<tbody class="tbody1">
+												<tr class="tr1">
 													<td colspan="2">
 														<label class="label">
 															<input type="checkbox" id="pay_agree" name="pay_agree" form="order_form">
@@ -1020,18 +1020,18 @@
 										</table>
 									</div>
 									<div class="tbl-order tot-order">
-										<table>
+										<table class="table1">
 											<caption></caption>
 											<colgroup>
 												<col style="width: 150px">
 												<col>
 											</colgroup>
-											<thead>
-												<tr>
-													<th>
+											<thead class="thead1">
+												<tr class="tr1">
+													<th class="th1">
 														<div class="final_pirce">최종 결제금액</div>
 													</th>
-													<td>
+													<td class="td1">
 														<strong class="price">
 															<em>
 																<span id="block_unit_dollar" style="display:none">$</span>

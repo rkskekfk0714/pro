@@ -21,6 +21,10 @@
 		font-family: 'NanumBarunGothic';
 	}
 	
+	.wrap {
+		width: 1200px;	
+	}
+	
 	#section {		
 		margin: 50px;
 		padding: 10px;
@@ -44,7 +48,7 @@
 	}
 	
 	.table1 {
-		margin-left: 1380px;
+		float: center;
 	}
 	
 	.text {
@@ -68,33 +72,11 @@
 	}
 	
 	.basket_order {
-		text-align: center;
+		text-align: right;
 		border: 1px solid white;
 		background-color: white;
 		color:black;
-		margin-left: 1200px;
 		padding:5px;
-	}
-	
-	.basket hover {
-		color:white;
-		background-color: black;
-	}
-	.order hover {
-		color:white;
-		background-color: black;
-	}
-	
-	.basket {
-		border-radius: 5px;
-		margin-right: -4px;
-		cursor:pointer;
-	}
-	
-	.order {
-		border-radius: 5px;
-		margin-left: -3px;
-		cursor:pointer;
 	}
 	
 	
@@ -112,6 +94,8 @@
 		background: #333;
 		webkit-transition: all 0.3s ease;
 		transition: all 0.3s ease;
+		border-radius: 5px;
+		cursor:pointer;
 	}
 	
 	.order {
@@ -128,6 +112,8 @@
 		background: white;
 		webkit-transition: all 0.3s ease;
 		transition: all 0.3s ease;
+		border-radius: 5px;
+		cursor:pointer;
 	}
 	
 	.container {
@@ -158,6 +144,7 @@
   
   	.review {
 	  	float: left;
+	  	margin-top: 20px;
   	}
   	
   	.tr2 {
@@ -186,26 +173,19 @@
   		color: white; 
   	}
   	
-  	footer {
-  		background: #ffa500;
+  	.recom {
+  		clear: left;
   	}
   	
-  	div .item:nth-child(1) {
-  		background: blueviolet;
-  	}
-  	
-  	div .item:nth-child(2) {
-  		background: pink;
-  	}
-  	
-  	div .item:nth-child(3) {
-  		background-color: burlywood;
+  	.con {
+  		clear: left;
   	}
 </style>
 <body>
+	<div class="wrap">
 			<section id="section">		
 			<div class="img">
-				<iframe class="iframe"width="1200" height="800" src="https://www.youtube.com/embed/037o6vxm0es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="700" height="500" src="https://www.youtube.com/embed/037o6vxm0es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			
 			<div class="meterial">
@@ -493,31 +473,26 @@
 			 </form>
 			 			 	 
 			 
-		<h2 class="recom">추천 영상</h2>
-		<div class="slidebox" data-role="slider" data-width="500" data-height="300">
-			<div class="con">
-				<div class="item">
-					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/t4Es8mwdYlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<h2 class="recom">추천 영상</h2>
+			<div class="slidebox" data-role="slider" data-width="500" data-height="300">
+				<div class="con">
+						<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/t4Es8mwdYlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/thXIVUt9PBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/RTj2_VKVSBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/kfGi3rTct8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/j9NXZh0gX3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/XV-78G9WngQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 				</div>
-				<div class="item">
-					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/thXIVUt9PBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="item">
-					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/RTj2_VKVSBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="item">
-					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/kfGi3rTct8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="item">
-					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/j9NXZh0gX3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="item">
-					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/XV-78G9WngQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>	
-		<button id="left-button">←</button>
-    	<button id="right-button">→</button>		
-	</section>
+			</div>	
+			<button id="left-button">←</button>
+	    	<button id="right-button">→</button>		
+		</section>
+	</div>
 </body>
 </html>

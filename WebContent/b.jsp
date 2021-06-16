@@ -22,6 +22,10 @@
       	margin:0;
 	}	
 	
+	.section {
+		width: 1200px;
+	}
+	
 	h2 {
 		font-size: 30px;
     	font-weight: bold;

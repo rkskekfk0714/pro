@@ -30,7 +30,7 @@
 	#contentWrapper {
 		padding-bottom: 100px;
 		position: relative;
-		width: 1366px;
+		width: 1200px;
 		margin: 0 auto;
 	}
 	
@@ -181,15 +181,136 @@
 	div {
 		display: block;
 	}
+	
+	.tb-center {
+		text-align: center;
+		padding: 0;
+	}
+	
+	input[type=checkbox] {
+		border: 0;
+	}
+	
+	input {
+		border: 1px solid #e0e0e0;
+	}
+	
+	.table-cart tbody td .thumb {
+		widht: 70px;
+		height: 70px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0;
+		line-height: 0;
+	}
+	
+	.table-cart tbody td .thumb a {
+		font-size: 0;
+		line-height: 0;
+	}
+	
+	.table-cart tbody td .thumb a, .table-cart tbody td .thumb img {
+		display: block;
+		width: 70px;
+		height: 70px;
+	}
+	
+	.tb-left {
+		text-align: left;
+		padding: 0 10px;
+	}
+	
+	.table-cart .opt-spin {
+		font-size: 0;
+	}
+	
+	.table-cart .opt-spin .btn-dw {
+		display: inline-block;
+		width: 33px;
+		height: 32px;
+		font-size: 12px;
+		color: #666;
+		line-height: 33px;
+		text-align: center;
+		border: 1px solid #ddd;
+	}
+	
+	.table-cart .opt-spin .txt-spin {
+	    width: 33px;
+	    height: 32px;
+	    text-align: center;
+	    border: none;
+	    border-top: 1px solid #ddd;
+	    border-bottom: 1px solid #ddd;
+	}
+	
+	.table-cart .opt-spin .btn-up {
+	    display: inline-block;
+	    width: 33px;
+	    height: 32px;
+	    font-size: 12px;
+	    color: #666;
+	    line-height: 33px;
+	    text-align: center;
+	    border: 1px solid #ddd;
+	}
+	
+	.table-cart .opt-spin .CSSbuttonBlack {
+	    margin-left: 4px;
+	}
+	
+	.table-cart tbody td, .table-cart tbody td {
+	    padding: 18px 0;
+	    border-bottom: 1px solid #e9e9e9;
+	}
+	
+	.CSSbuttonBlack {
+	    display: inline-block;
+	    padding: 8px 12px;
+	    font-size: 12px;
+	    color: #fff;
+	    border: 1px solid #333;
+	    background: #333;
+	    -webkit-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+	
+	.table-cart tfoot strong {
+	    font-size: 24px;
+	    color: #000;
+	    margin-left: 3px;
+	}
+	
+	.table-cart tfoot td {
+	    padding: 16px 0 20px;
+	    font-size: 13px;
+	    color: #999;
+	    border-bottom: 1px solid #e9e9e9;
+	    background: #fcfcfc;
+	}
+	
+	.tb-bold {
+		font-weight: bold;
+	}
+	
+	.d-block {
+		display: block;
+	}
+	
+	a{
+		color: black;
+		text-decoration: none;
+	}
+	
+	img {
+		border: 0 none;
+	}
 </style>
 <body>
 	<div id="contentWrapper">
 		<div id="contentWrap">
 			<div id="content">
 				<div id="cartWrap">
-				<header>
-				<h1 class="header">모두의 레시피</h1>
-				</header>
 					<h2 class="tit-page">장바구니</h2>
 					<div class="page-body">
 						<div class="table-cart table-fill-prd">
@@ -259,17 +380,16 @@
 										<td>
 											<div class="tb-center">
 												<div class="thumb">
-													<a href="영상 링크">
-														<img src="해당 영상 이미지" alt="상품 섬네일">
+													<a href="b.jsp">
+														<img src="img/milk.png" alt="상품 섬네일">
 													</a>
 												</div>
 											</div>
 										</td>
 										<td>
 											<div class="tb-center">
-												<a href="영상 링크">영상 제목</a>
+												<a>우유</a>
 												<span class="MK-product-icons">
-													<img src="Best or New 이미지 링크" class="MK-product-icon-2">
 												</span>
 											</div>
 										</td>
@@ -283,12 +403,36 @@
 												</div>
 											</div>
 										</td>
+										<td>
+											<div class="tb-center">250</div>
+										</td>
+										<td>
+											<div class="tb-center tb-price">
+												<span>3,700원</span>
+											</div>
+										</td>
+										<td>
+											<div class="tb-center tb-delivery">2,500원</div>
+										</td>
+										<td>
+											<div class="tb-center">
+												<span class="d-block">
+													<a href="javascrip:send_basket(0, 'del')" class="cartDel">
+														<i class="xi-close">
+															X
+														</i>
+													</a>											
+												</span>
+											</div>
+										</td>
 									</tr>
 								</tbody>
 								<tfoot>
+								<tfoot>
 									<tr>
 										<td colspan="8">
-											<div class="tb-center">장바구니에 담긴 상품이 없습니다.
+											<div class="tb-center">
+												총 구매금액 : 3,700원 + 배송료 2,500원 = 6,200원
 											</div>
 										</td>
 									</tr>
