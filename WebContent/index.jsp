@@ -14,5 +14,6 @@
 	<a href="order.jsp">order</a><br>
 	<a href="newVideo.jsp">video</a><br>
 	<a href="videoClick.jsp">videoclick</a><br>
+	<a href=Q4_갤러리만들기.jsp">slider</a><br>
 </body>
 </html>

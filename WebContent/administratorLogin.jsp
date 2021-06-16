@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ include file="header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,19 +18,17 @@
 	
 	body {
 		font-family: 'NanumBarunGothic';
+		height:100%;
+      	margin:0;
 	}
 	
-	h1 {
-	   font-size: 60px;
-	   font-weight: bold;
-	   font-family: 'Courgette', cursive;
-	}
+	
 	
 	.login-form {
 		width: 300px;
 		margin-right: auto;
 	    margin-left: auto;
-	    margin-top: 50px;
+	    margin-top: 100px;
 	    padding: 20px;
 		text-align: center;
 	    border: none;
@@ -164,29 +163,29 @@
 	}
 </style>
 <body>
-	<h1 align="center" onclick="location.href='Main.html'"> 모두의 레시피 </h1>
 	<div class="login-form">
-    <h2 align="center">Administrator Login</h2>
-    <form>
-      <input type="text" class="id" placeholder="ID">
-      <input type="password" class="pwd" placeholder="PASSWORD">
-      <input type="submit" class="log" value="로그인"><br>
-      <div class=""></div>
-      <div class="loginUtil">
-        <p class="check">
-        
-        <input type="checkbox" name="idsave" id="idsave" value="Y"/>아이디저장
-        
-        
-      	</p>
-      	
-      	<input type="button" class="id_find" onclick="location.href='idfind.jsp'" value="아이디 찾기">
-      	<input type="button" class="pwd_find" onclick="location.href='pwdfind.jsp'" value="비밀번호 찾기">
-      </div>
-      </form>
-      
-      <p>
-    	<input type="submit" class="join" value="Administrator Join" onclick="location.href='administratorJoin.jsp'">
-	</p>
+		<h2 align="center">Administrator Login</h2>
+			<form>
+				<input type="text" class="id" placeholder="ID">
+			    <input type="password" class="pwd" placeholder="PASSWORD">
+			    <input type="submit" class="log" value="로그인"><br>
+			    <div class=""></div>
+			    <div class="loginUtil">
+			    <p class="check">
+			        
+			    <input type="checkbox" name="idsave" id="idsave" value="Y"/>아이디저장
+			        
+			        
+			    </p>
+			      	
+			    <input type="button" class="id_find" onclick="location.href='idfind.jsp'" value="아이디 찾기">
+			    <input type="button" class="pwd_find" onclick="location.href='pwdfind.jsp'" value="비밀번호 찾기">
+			    </div>
+			</form>
+			      
+			<p>
+				<input type="submit" class="join" value="Administrator Join" onclick="location.href='administratorJoin.jsp'">
+			</p>
+	</div>     
 </body>
 </html>

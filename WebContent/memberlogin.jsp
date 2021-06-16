@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>모두의 레시피</title>
+<link rel="stylesheet" href="style.css">
+
 </head>	
 <style>
 	@font-face {
@@ -16,18 +19,17 @@
 	
 	body {
 		font-family: 'NanumBarunGothic';
+		height:100%;
+      	margin:0;
 	}
 	
-	h1 {
-	   font-size: 60px;
-	   font-weight: bold;
-	}
+	
 	
 	.login-form {
 		width: 300px;
 		margin-right: auto;
 	    margin-left: auto;
-	    margin-top: 50px;
+	    margin-top:50px;
 	    padding: 20px;
 		text-align: center;
 	    border: none;
@@ -162,37 +164,119 @@
 	}
 </style>
 <body>
-	<h1 align="center" onclick="location.href='Main.html'"> 모두의 레시피 </h1>
-	<div class="login-form">
-    <h2 align="center">Member Login</h2>
-    <form>
-      <input type="text" class="id" placeholder="ID">
-      <input type="password" class="pwd" placeholder="PASSWORD">
-      <input type="submit" class="log" value="로그인"><br>
-      <div class=""></div>
-      <div class="loginUtil">
-        <p class="check">
-        
-        <input type="checkbox" name="idsave" id="idsave" value="Y"/>아이디저장
-        
-        
-      	</p>
-      	
-      	<input type="button" class="id_find" onclick="location.href='idfind.jsp'" value="아이디 찾기">
-      	<input type="button" class="pwd_find" onclick="location.href='pwdfind.jsp'" value="비밀번호 찾기">
-      </div>
-      
-      <br>
-      <br>
-    </form>
-    
-    <p>
-    	<input type="submit" class="join" value="Member Join" onclick="location.href='memberjoin.jsp'">
-	</p>
-	<p>
-		<input type="submit" class="Administrator_Login" value="Administrator Login" onclick="location.href='administratorLogin.jsp'">
-	</p>
-  
-    </div>
+         </div>
+         <img src="img/Logo.png" alt="모두의레시피" style="display: block; margin: 0px auto;">
+         <div class="navigation" style="position: absolute; width: 900px; height:56px; left: 50%; margin: 0 0 0 -450px; left:450px;">
+         </div>
+         <nav id="nav">
+               <ul class="menulist" style="position: relative; top: 15px; height:45px;">
+                  <li class="menu"><a class="menu-a" href="#">New</a>
+                     <ul class="navsub" style="width: 70px;">
+                        <li class="menusub"><a class="menusubsub"
+                           style="position: relative; right: 5px;" href="#"
+                        >New</a></li>
+                     </ul></li>
+                  <li class="menu"><a class="menu-a" href="#">Best</a>
+                     <ul class="navsub" id="bestsub" style="width: 70px;">
+                        <li class="menusub" style="position: relative;"><a
+                           class="menusubsub" href="#"
+                        >Best</a></li>
+                     </ul></li>
+                  <li class="menu"><a class="menu-a" href="#"
+                     style="position: relative; right: 10px;"
+                  >Creator</a>
+                     <ul class=navsub id="creatorsub" style="width: 90px;">
+                        <li><a class="menusubsub" href="#">Creator</a></li>
+                     </ul></li>
+                  <li class="menu"><a class="menu-a" href="#">MENU</a>
+                     <ul class="navsub" id="menusub">
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/koreanfood.png"
+                        ><a class="menusubsub" href="#">한식</a></li>
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/sushi.png"
+                        ><a class="menusubsub" href="#">일식</a></li>
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/steak.png"
+                        ><a class="menusubsub" href="#">양식</a></li>
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/jjajang.png"
+                        ><a class="menusubsub" href="#">중식</a></li>
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/dduk.png"
+                        ><a class="menusubsub" href="#">분식</a></li>
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/chicken.png"
+                        ><a class="menusubsub" href="#">치킨</a></li>
+                        <li class="menusub"><img class="menusubsubimg"
+                           src="img/pizza.png"
+                        ><a class="menusubsub" href="#">피자</a></li>
+                     </ul></li>
+                  <li class="menu"><a class="menu-a" href="#">Material</a>
+                     <ul class="navsub" id="materialsub">
+                        <li><img class="menusubsubimg" src="img/meat.png"><a
+                           class="menusubsub" href="#"
+                        >정육</a></li>
+                        <li><img class="menusubsubimg" src="img/fish.png"><a
+                           class="menusubsub" href="#"
+                        >수산|해산</a></li>
+                        <li><img class="menusubsubimg" src="img/noodle.png"><a
+                           class="menusubsub" href="#"
+                        >면|견과</a></li>
+                        <li><img class="menusubsubimg" src="img/fruits.png"><a
+                           class="menusubsub" href="#"
+                        >과일</a></li>
+                        <li><img class="menusubsubimg" src="img/vegetable.png"><a
+                           class="menusubsub" href="#"
+                        >채소</a></li>
+                        <li><img class="menusubsubimg" src="img/bread.png"><a
+                           class="menusubsub" href="#"
+                        >베이커리</a></li>
+                        <li><img class="menusubsubimg" src="img/sauce.png"><a
+                           class="menusubsub" href="#"
+                        >양념|오일</a></li>
+                        <li><img class="menusubsubimg" src="img/milk.png"><a
+                           class="menusubsub" href="#"
+                        >계란|유제품</a></li>
+                     </ul></li>
+               </ul>
+               <div class="searchboxdiv" style="position:relative; width:250px; left:560px; bottom:35px;">
+                  <input class="searchbox" type="text" placeholder="&nbsp오늘은 어떤 요리를 만들까요?">
+                  <button class="searchbtn" style="font-family: 'NanumSquareRound'; width: 32px; height: 32px; border: none; cursor: pointer;">
+                     <img src="img/button_search.png" style="width: 32px; height: 32px;">
+                  </button>
+               </div>
+              </nav>
+				<div class="login-form">
+			    <h2 align="center">Member Login</h2>
+			    <form>
+			      <input type="text" class="id" placeholder="ID">
+			      <input type="password" class="pwd" placeholder="PASSWORD">
+			      <input type="submit" class="log" value="로그인"><br>
+			      <div class=""></div>
+			      <div class="loginUtil">
+			        <p class="check">
+			        
+			        <input type="checkbox" name="idsave" id="idsave" value="Y"/>아이디저장
+			        
+			        
+			      	</p>
+			      	
+			      	<input type="button" class="id_find" onclick="location.href='idfind.jsp'" value="아이디 찾기">
+			      	<input type="button" class="pwd_find" onclick="location.href='pwdfind.jsp'" value="비밀번호 찾기">
+			      </div>
+			      
+			      <br>
+			      <br>
+			    </form>
+			    
+			    <p>
+			    	<input type="submit" class="join" value="Member Join" onclick="location.href='memberjoin.jsp'">
+				</p>
+				<p>
+					<input type="submit" class="Administrator_Login" value="Administrator Login" onclick="location.href='administratorLogin.jsp'">
+				</p>
+			  
+			    </div>
 </body>
 

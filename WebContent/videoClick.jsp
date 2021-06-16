@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>모두의 레시피</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 </head>
 <style>
 	@font-face {
@@ -19,86 +21,12 @@
 		font-family: 'NanumBarunGothic';
 	}
 	
-	.wrap {
-		width: 100%;
-		min-width: 1366px;
-	}
-	
-	.header {
-		background: #ffa500;
-		position: relative;
-		margin: 0px;
-		padding: 0px;
-		left: 0px;
-		right: 0px;
-		width: 100%;
-		z-index: 100;
-		height: 200px;
-		display: flex;
-  		justify-content: space-between;
- 		align-items: center;			
-	}
-	
-	h1 {
-		text-align: center;
-		background: #ffa500;
-		font-size: 60px;
-    	font-weight: bold;
-	}
-	
-	#navMenu {
-		float: center;
-		width:960px;
-    	height:60px;
-    	padding-bottom:10px;
-    	font-weight: bold;
-	}
-	
-	#navMenu ul {
-		list-style: none;
-    	padding-top: 10px; 
-    	padding-bottom: 5px;
-	}
-	
-	#navMenu ul li {
-		float: left;
-    	width: 130px;
-    	padding: 10px;
-	}
-	
-	#navMenu .menu {
-		text-decoration: none;
-		color: white;
-		display: block;
-		width: 150px;
-		font-size: 12px;
-		font-weight: bold;
-	}
-	
-	#navMenu a:link, #navMenu a:visited{
-    display:block;
-    font-size:14px;
-    color: black;
-    padding: 10px; 
-    text-decoration: none;  
-    text-align: center;
-  }
-	
-	#navMenu a:hover,  #navMenu a:focus {
-    background-color:#222;  
-    color:white; 
-  }
-  
-  #navMenu a:active {
-    background-color:black;  
-  }
-	
 	#section {		
 		margin: 50px;
 		padding: 10px;
 	}
 	
-	.iframe {
+	.img {
 		float: left;
 		margin-top: 50px;
 		padding: 10px 0 10px;
@@ -115,7 +43,7 @@
 		padding: 10px 0 10px;
 	}
 	
-	table {
+	.table1 {
 		margin-left: 1380px;
 	}
 	
@@ -126,7 +54,7 @@
 		padding: 10px;
 	}
 	
-	.text table tr td {
+	.text .table1 .tr1 .td {
 		padding: 5px;
 	}
 	
@@ -136,6 +64,7 @@
 		color: black;
 		margin-left: 20px;
 		text-align: right;
+		cursor:pointer;
 	}
 	
 	.basket_order {
@@ -159,11 +88,13 @@
 	.basket {
 		border-radius: 5px;
 		margin-right: -4px;
+		cursor:pointer;
 	}
 	
 	.order {
 		border-radius: 5px;
 		margin-left: -3px;
+		cursor:pointer;
 	}
 	
 	
@@ -212,6 +143,7 @@
 	    font-size: 15px;
 	    background-color: white;
 	    border-color: gray;
+	    cursor:pointer;
   	}
   
   	.vdoclick {
@@ -225,27 +157,52 @@
   	}
   
   	.review {
-  	text-align: center;
-  	float: left;
-  	font-size:
+	  	float: left;
+  	}
+  	
+  	.tr2 {
+  		text-align: center;
+  	}
+  	
+  	.tab {
+  		width: 100%;
+  		border-top: 1px solid #dedede;
+  	}
+  	
+  	.th1, .th2, .td1, .td2, .td3, .td4 {
+  		border-bottom: 1px solid #dedede;
+  		border-collapse: collapse;
+  		padding: 20px 40px;
+  	}
+  	
+  	.td5 {
+  		border-bottom: 1px solid #dedede;
+  	}
+  	
+  	.see {
+  		broder: 1px solid black;
+  		border-radius: 10px;
+  		background-color: black;
+  		color: white; 
+  	}
+  	
+  	footer {
+  		background: #ffa500;
+  	}
+  	
+  	div .item:nth-child(1) {
+  		background: blueviolet;
+  	}
+  	
+  	div .item:nth-child(2) {
+  		background: pink;
+  	}
+  	
+  	div .item:nth-child(3) {
+  		background-color: burlywood;
   	}
 </style>
 <body>
-	<div class="wrap">
-		<header id="header">
-			<h1>모두의 레시피</h1>				
-		</header>
-		<div class="container">
-		<nav id="navMenu">
-			<ul>
-				<li><a class="menu" href="b.jsp">백종원</a></li>
-				<li><a class="menu" href="c.jsp">최현석</a></li>
-				<li><a class="menu" href="o.jsp">이연복</a></li>
-				<li><a class="menu" href="k.jsp">레이먼 킴</a></li>
-				<li><a class="menu" href="m.jsp">미카엘 아쉬미노프</a></li>
-			</ul>				
-		</nav>
-		</div>
 			<section id="section">		
 			<div class="img">
 				<iframe class="iframe"width="1200" height="800" src="https://www.youtube.com/embed/037o6vxm0es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -254,148 +211,148 @@
 			<div class="meterial">
 				<h2>재료 장바구니</h2>
 				<div class="text">
-					<table>
-						<tr>
-							<td>
+					<table class="table1">
+						<tr class="tr1">
+							<td class="td">
 								돼지고기 등심
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								꽃소금
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr">
+							<td class="td">
 								후춧가루
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								밀가루
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								달걀
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								빵가루
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								튀김용 식용유
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								케찹
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								황설탕
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								진간장
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								식초
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								소고기 다시다
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								MSG가루
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								양배추
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								마요네즈
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								우스터소스
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								단무지
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>
-						<tr>
-							<td>
+						<tr class="tr1">
+							<td class="td">
 								방울토마토
 							</td>
-							<td>
+							<td class="td">
 							<input type="button" class="button" value="X" />
 							</td>
 						</tr>						
@@ -500,62 +457,67 @@
 			  </div>
 			  
 			  <hr width="100%" color="#ededed">
-			  <article>				  
-				  <div class="recom">
-				  	<iframe width="300" height="250" src="https://www.youtube.com/embed/t4Es8mwdYlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	<iframe width="300" height="250" src="https://www.youtube.com/embed/thXIVUt9PBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	<iframe width="300" height="250" src="https://www.youtube.com/embed/RTj2_VKVSBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	
-				  </div>
-				  
-				  
-				  
-				  
-				  
-				  <div class="review">
-				  	<table>
-				  		<thead>
-					  		<tr>
-					  			<th>번호</th>
-					  			<th>제목</th>
-					  			<th>작성자</th>
-					  			<th>작성일</th>
+			  
+			<form class="review">
+				<h2 class="rev">Review</h2>				
+				  	<table class="tab">
+				  		<thead clsas="the">
+					  		<tr class="tr2">
+					  			<th class="th1">번호</th>
+					  			<th class="th2">제목</th>
+					  			<th class="th1">작성자</th>
+					  			<th class="th1">작성일</th>
+					  			<th class="th1">상세보기</th>
 					  		</tr>
 				  		</thead>
-				  		<tbody>
-							<tr>
-								<td>
+				  		<tbody class="tbo">
+							<tr class="tr2">
+								<td class="td1">
 									1
 								</td>
-								<td>
-									신선해요
+								<td class="td2">
+									우와아아아아아앙 신선해요 !
 								</td>
-								<td>
+								<td class="td3">
 									홍길동
 								</td>
-								<td>
+								<td class="td4">
 									2021.06.01
 								</td>
-							</tr>
-							<tr>
-								<td>
-									2
-								</td>
-								<td>
-									재구매
-								</td>
-								<td>
-									김수경
-								</td>
-								<td>
-									2021.06.05
+								<td class="td5">
+									<input type="button" class="see"value="보기" onclick="location.href='리뷰링크'">
 								</td>
 							</tr>
 						</tbody>
 					</table>
-				  </div>
-			  </article>
-		</section>
-	</div>
+			 </form>
+			 			 	 
+			 
+		<h2 class="recom">추천 영상</h2>
+		<div class="slidebox" data-role="slider" data-width="500" data-height="300">
+			<div class="con">
+				<div class="item">
+					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/t4Es8mwdYlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item">
+					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/thXIVUt9PBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item">
+					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/RTj2_VKVSBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item">
+					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/kfGi3rTct8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item">
+					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/j9NXZh0gX3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item">
+					<iframe class="if" width="150" height="150" src="https://www.youtube.com/embed/XV-78G9WngQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>	
+		<button id="left-button">←</button>
+    	<button id="right-button">→</button>		
+	</section>
 </body>
 </html>

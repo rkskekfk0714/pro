@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,18 +15,9 @@
 		 src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
 		 src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
 	}
-	
-	body {
-		font-family: 'NanumBarunGothic';
-	}
-	
-	 h1 {
-	    font-size: 60px;
-	    font-weight: bold;
-	 }
 	  
 	.login-form {
-	  	width: 400px;
+	  	width: 500px;
 	  	margin-right: auto;
 	    margin-left: auto;
 	    margin-top: 50px;
@@ -40,13 +32,15 @@
 	}
 	
 	.id {
-	      font-size: 14px;
-	      padding: 10px;
-	      border: none;
-	  	  border-bottom: 1px solid gray;
-	      width: 210px;
-	      margin-bottom: 10px;
-	 
+		float: center;
+		text-align: left;
+	    font-size: 14px;
+	    padding: 10px;
+	    border: none;
+	  	border-bottom: 1px solid gray;
+	    width: 200px;
+	    margin-bottom: 10px;
+	 	
 	}
 	
 	.idcheck {
@@ -55,6 +49,7 @@
 	   	  background-color: white;
 	   	  border-radius: 25px;
 	   	  border-color: gray;
+	   	  cursor:pointer;
 	}
 	
 	.passwd {
@@ -67,23 +62,27 @@
 		font-weight: bold;
 	}
 	
-	.pwd {
-	      font-size: 14px;
-	      padding: 10px;
-	      border: none;
-	  border-bottom: 1px solid gray;
-	      width: 210px;
-	      margin-bottom: 10px;
-	 
+	.pwd {	      
+		text-align: left;
+		float: center;
+	    font-size: 14px;
+	    padding: 10px;
+	    border: none;
+	  	border-bottom: 1px solid gray;
+	    width: 260px;
+	    margin-bottom: 10px;
+	    margin-left: -50px;
 	}
 	
 	.pwdCheck {
 	  font-size: 14px;
+	  float: center;
 	  padding: 10px;
 	  border: none;
 	  border-bottom: 1px solid gray;
-	  width: 210px;
-	  margin-bottom: 10px;  
+	  width: 260px;
+	  margin-bottom: 10px; 
+	  margin-left: -80px;
 	}
 	
 	.Na {
@@ -92,21 +91,24 @@
 	}
 	
 	.name {
+		float: center;
 	  font-size: 14px;
       padding: 10px;
       border: none;
 	  border-bottom: 1px solid gray;
-      width: 210px;
+      width: 260px;
       margin-bottom: 10px;
+      margin-left: -30px; 
 	}
 
 	.ad {
 	  text-align: center;
+	  float: center;
 	  font-size: 14px;
       padding: 10px;
       border: none;
 	  border-bottom: 1px solid gray;
-      width: 210px;
+      width: 260px;
       margin-bottom: 10px;
 	}
 	
@@ -116,6 +118,7 @@
 	}
 	
 	.address {
+	  float: center;
 	  text-align: center;
 	  font-size: 14px;
 	  padding: 10px;
@@ -129,10 +132,12 @@
 		background-color: white;
 	   	  border-radius: 25px;
 	   	  border-color: gray;
+	   	  cursor:pointer;
 	}
 	
 	.detailaddress {
 	  text-align: center;
+	  float: center;
 	  font-size: 14px;
 	  padding: 10px;
 	  border: none;
@@ -149,6 +154,7 @@
 	  background-color: white;
 	  margin-bottom: 30px;
 	  color: black;
+	  cursor:pointer;
 	}
 	
 	.Administrator_Login {
@@ -173,10 +179,11 @@
 	  	color: gray;
 	}
 	
+	
 	p {
 	  font-size: 13px;
 	  color: gray;
-	
+		padding: 10px;
 	}
 	
 	.gen {
@@ -187,6 +194,7 @@
 	.col-tit {
 		float: left;
 		font-weight: bold;
+		padding-top: 20px;
 	}
 	
 	.col-content {
@@ -203,45 +211,41 @@
 	    padding: 10px;
 	    border: none;
 	  	border-bottom: 1px solid gray;
-	    width: 210px;
+	    width: 50px;
 	    margin-bottom: 10px;
 	}
-
+	
+	.inpTxt {
+		text-align: left;
+		font-size: 14px;
+	    padding: 10px;
+	    border: none;
+	  	border-bottom: 1px solid gray;
+	    width: 50px;
+	    margin-bottom: 10px;
+	}
 </style>
 <body>
-  <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js">
-    function openZipSearch() {
-  new  daum.Postcod( {
-    oncomplete: function(data) {
-      $('[name=zip]').val(data.zonecod);
-      $('[name=addr1]').val(data.address);
-      $('[name=addr2]').val(data.buildingName);
-    }
-  }).open();
-}
-  </script>
-  <h1 align="center" onclick="location.href='Main.html'"> 모두의 레시피 </h1>
   
   <div class="login-form">
     <h2 align="center">Join</h2>
     <form>
-      <a class="i_d">ID</a>
+      <a class="i_d">아이디</a>
       <input type="text" class="id">
       <input type="submit" class="idcheck" value="중복확인"><br>
-      <a class="passwd">PASSWORD</a>
-      <input type="password" class="pwd">
-      <a class="passwdche">PASSWORD CHECK</a>
-      <input type="password" class="pwdCheck">
-      <a class="Na">NAME</a>
+      <a class="passwd">비밀번호</a>
+      <input type="password" class="pwd"><br>
+      <a class="passwdche">비밀번호확인</a>
+      <input type="password" class="pwdCheck"><br>
+      <a class="Na">이름</a>
       <input type="text" class="name"><br>
-      <a class="adr">ADDRESS</a>
+      <a class="adr">주소</a>
       <input type="text" name="zip" class="ad" style="width:80px; height:26px;" placeholder="우편번호"/>
-      <input type="text" name="zip" class="ad" style="width:80px; height:26px;" placeholder="주소검색"/>
       <button type="button" class="adcheck"style="width: 45px; height: 32px;" onclick="openZipSearch()"> 검색 </button><br>
       <input type="text" name="addr1" class="address" placeholder="주소">      
       <input type="text" name="addr2" class="detailaddress" placeholder="상세주소">
       <br>
-      <td class="birth">
+      <div class="birth">
       <a class="dat">생년월일</a>
         <input type="hidden" class="date">
         <select name="birthyear" class="MS_select MS_birthday">
@@ -401,41 +405,44 @@
           <option value="31">31</option>
         </select>
         일
+        </div>
         <br>
         <a class="gen">성별</a>
         <input type="radio" name="sex" class="MS_radio" value="1"/>
         <a class="gender">남</a>
         <input type="radio" name="sex" class="MS_radio" value="2"/>
         <a class="gender">여</a>
-      </td>
-      <br>
-      <div class="col-tit">휴대폰</div>
-      <div class="col-content">
-      	<select>
-      		<option value="010">010</option>
-      		<option value="011">011</option>
-      		<option value="016">016</option>
-      	</select>
-      	-
-      	<input type="text" id="HPhone2" class="inpTxt">
-      	-
-      	<input type="text" id="HPhone2" class="inpTxt">
-      </div>
-      <div class="col-tit">이메일</div>
-      <div class="col-content">
-      	<input type="text" id="Email1" class="inpTxt">
-      	@
-      	<input type="text" id="Email2">
-      	<select>
-      		<option value="naver.com">naver.com</option>
-      		<option value="gmail.com">gmail.com</option>
-      		<option value="daum.net">daum.net</option>
-      	</select>
-      	<input type="checkbox" id="mail_agree">
-      	<label for="mail_agree">이메일 수신동의</label>
-      </div>
-      <input type="submit" class="join" value="가입하기">
-    </form>
-  </div>
+	      
+	      <br>
+	      <div class="col-tit">휴대폰</div>
+	      <div class="col-content">
+	      	<select>
+	      		<option value="010">010</option>
+	      		<option value="011">011</option>
+	      		<option value="016">016</option>
+	      	</select>
+	      	-
+	      	<input type="text" id="HPhone2" class="inpTxt">
+	      	-
+	      	<input type="text" id="HPhone2" class="inpTxt">
+	      </div>
+	      <div class="col-tit">이메일</div>
+	      <div class="col-content">
+	      	<input type="text" id="Email1" class="inpTxt">
+	      	@
+	      	<input type="text" id="Email2" class="inpTxt">
+	      	<select>
+	      		<option value="naver.com">naver.com</option>
+	      		<option value="gmail.com">gmail.com</option>
+	      		<option value="daum.net">daum.net</option>
+	      	</select>
+	      	<input type="checkbox" id="mail_agree">
+	      	<label for="mail_agree">이메일 수신동의</label>
+	      </div>
+	      <input type="submit" class="join" value="가입하기">
+	      
+	    </form>
+	    
+	  </div>
 </body>
 </html>

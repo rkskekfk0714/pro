@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ include file="header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,14 +18,6 @@
 	
 	body {
 		font-family: 'NanumBarunGothic';
-	}
-	
-	.header {
-		text-align: center;
-	}
-	
-	h1 {
-		font-size: 60px;
 	}
 	
 	textarea {
@@ -553,9 +546,6 @@
 		<div id="contentWrap">
 			<div id="content">
 				<div id="order">
-					<header class="header">
-						<h1>모두의 레시피</h1>
-					</header>
 					<h2 class="tit-page">주문서작성</h2>
 					<div class="page-body">
 						<form name="form1" id="order_form" method="post">

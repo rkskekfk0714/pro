@@ -6,7 +6,7 @@
   </welcome-file-list>
   <servlet>
   	<servlet-name>loginS</servlet-name>
-  	<servlet-class>com.edu.test..LoginOut</servlet-class>
+  	<servlet-class>Project.controller</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>loginS</servlet-name>
