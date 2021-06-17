@@ -335,7 +335,7 @@
 		border: 1px solid #ddd;
 	}
 	
-	#order .select1 {
+	#order select {
 		height: 32px;
 		line-height: 32px;
 		border: 1px solid #ddd;
@@ -456,13 +456,13 @@
 	}
 	
 	
-	.select1 {
+	select {
 		width: 50px;
 		height: 32px;
 		line-height: 32px;
 	}
 	
-	input, .select1 {
+	input, select {
 		border: 1px solid #e0e0e0;
 	}
 	
@@ -539,6 +539,10 @@
 	form {
 		margin: 0;
 		padding: 0;
+	}
+	
+	.MK_pay_add_choice {
+		width: 320px;
 	}
 </style>
 <body>
@@ -645,7 +649,8 @@
 													<th scope="row">
 														<div class="txt-l">이름</div>
 													</th>
-													<td>														
+													<td>	
+														홍길동													
 														<input type="hidden" name="sender" form="order_form" id="sender" class="MS_input_txt" value>
 													</td>													
 												</tr>
@@ -857,7 +862,7 @@
 													<th scope="col">결제 예정금액</th>													
 												</tr>
 												<tr class="tr1">
-													<td class="tr1">
+													<td class="td1">
 														<div class="base">
 															<strong class="strong1">
 																<em>
@@ -876,10 +881,11 @@
 																<span id="block_op_delivery_unit">원</span>
 															</strong>
 															<a class="plus">
-																<img srt="img/더하기.jpg" alt="plus">
+																<img src="img/더하기.jpg" alt="plus" style="width: 20px; height: 20;">
 															</a>
 															<a class="minus" style="display: none;">
-																<img src="img/빼기.jpg" alt="minus">
+																<img src="img/빼기.jpg" alt="minus" style="width: 20px; height: 20;">
+															</a>
 														</div>
 													</td>
 													<td class="td1">
@@ -891,10 +897,10 @@
 																원
 															</strong>
 															<a class="pluc" style="display: none;">
-																<img src="img/더하기.jpg" alt="plus" style="width: 10px; height: 10;">
+																<img src="img/더하기.jpg" alt="plus" style="width: 20px; height: 20;">
 															</a>
 															<a class="minus">
-																<img src="img/빼기.jpg" alt="minus" style="width: 10px; height: 10;">
+																<img src="img/빼기.jpg" alt="minus" style="width: 20px; height: 20;">
 															</a>
 														</div>
 													</td>
@@ -907,10 +913,10 @@
 																원
 															</strong>
 															<a class="plus">
-																<img srt="img/더하기.jpg" alt="plus" style="width: 10px; height: 10;">
+																<img src="img/더하기.jpg" alt="plus" style="width: 20px; height: 20;">
 															</a>
 															<a class="minus" style="display: none;">
-																<img src="img/빼기.jpg" alt="minus" style="width: 10px; height: 10;">
+																<img src="img/빼기.jpg" alt="minus" style="width: 20px; height: 20;">
 															</a>
 														</div>
 													</td>
@@ -983,7 +989,7 @@
 																<em>
 																	<span class="op-bank-dc-price fc-red"></span>
 																</em>
-																<select class="select1" name="pay_data" class="w280 MK_bank_select_list MK_pay_add_choice">
+																<select name="pay_data" class="w280 MK_bank_select_list MK_pay_add_choice">
 																	<option value>입금 계좌번호 선택(반드시 주문자 성함으로 입금)</option>
 																	<option value="농협중앙회 100055505005214 (예금주:모두의 레시피)">농협중앙회 100055505005214 (예금주:모두의 레시피)</option>
 																	<option value="국민은행 595101472215 (예금주:모두의 레시피)">국민은행 595101472215 (예금주:모두의 레시피)</option>

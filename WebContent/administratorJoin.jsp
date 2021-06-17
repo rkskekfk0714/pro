@@ -280,7 +280,7 @@ function sample4_execDaumPostcode() {
 		font-size: 14px;
       	padding: 10px;
       	border: none;
-      	width: 210px;
+      	width: 260px;
       	margin-bottom: 10px;
 	}
 	
@@ -300,8 +300,33 @@ function sample4_execDaumPostcode() {
 	    padding: 10px;
 	    border: none;
 	  	border-bottom: 1px solid gray;
-	    width: 50px;
+	    width: 60px;
 	    margin-bottom: 10px;
+	}
+	
+	.select_email {		
+		text-align: center;
+		width: 85px;
+		height: 32px;
+		line-height: 32px;
+	}
+	
+	.MS_select {
+		text-align: center;
+		width: 60px;
+		height: 32px;
+		line-height: 32px;
+	}
+	
+	.col_select {
+		text-align: center;
+		width: 50px;
+		height: 32px;
+		line-height: 32px;
+	}
+	
+	#mail_agree {
+		font-size: 5px;
 	}
 </style>
 <body>
@@ -499,7 +524,7 @@ function sample4_execDaumPostcode() {
 	      <br>
 	      <div class="col-tit">휴대폰</div>
 	      <div class="col-content">
-	      	<select>
+	      	<select class="col_select">
 	      		<option value="010">010</option>
 	      		<option value="011">011</option>
 	      		<option value="016">016</option>
@@ -514,7 +539,7 @@ function sample4_execDaumPostcode() {
 	      	<input type="text" id="Email1" class="inpTxt">
 	      	@
 	      	<input type="text" id="Email2" class="inpTxt">
-	      	<select>
+	      	<select select_email>
 	      		<option value="naver.com">naver.com</option>
 	      		<option value="gmail.com">gmail.com</option>
 	      		<option value="daum.net">daum.net</option>
