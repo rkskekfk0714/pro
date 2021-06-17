@@ -1055,7 +1055,7 @@
 										</table>
 									</div>
 									<div id="paybutton">
-										<a href="javascript:send();" class="CSSbuttonLog">주문하기
+										<a href="orderComp.jsp" class="CSSbuttonLog">주문하기
 										</a>
 										<a href="javascript:order cancel('cancel')" class="CSSbuttonLogW">주문취소</a>
 									</div>
