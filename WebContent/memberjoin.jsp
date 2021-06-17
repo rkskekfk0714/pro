@@ -564,5 +564,6 @@ function sample4_execDaumPostcode() {
 	    </form>
 	    
 	  </div>
+	  <%@ include file="footer.jsp"%>
 </body>
 </html>

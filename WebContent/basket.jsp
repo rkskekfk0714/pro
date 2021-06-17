@@ -460,10 +460,11 @@
 							</script>
 						</div>
 					</div>
-				</div>
+				</div>				
 			</div>
 		</div>
 	</div>
 	<hr>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

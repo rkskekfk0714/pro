@@ -494,5 +494,6 @@
 	    	<button id="right-button">→</button>		
 		</section>
 	</div>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

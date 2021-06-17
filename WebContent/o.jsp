@@ -147,7 +147,7 @@
   		 text-overflow: ellipsis;
   		 white-space: normal;
   		 -webkit-line-clamp: 2;
-  		 font-size: 17px;
+  		 font-size: 20px;
   		 cursor: pointer;
   	}
   	
@@ -165,6 +165,12 @@
   		 font-size: 17px;
   		 cursor: pointer;
   	}
+  	
+  	
+  	.best_menu_wrap .mrr_frist .best_link_but:hover{
+	  background-color: orange;
+	  color: white;
+	}
   	
 </style>
 
@@ -184,22 +190,22 @@
          </div>
          <div class="main_recom_recipe mrr_frist">
             <iframe width="240" height="140" src="https://www.youtube.com/embed/kR77WlHRZrs?list=TLPQMDgwNjIwMjHMHC0N3n91FQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">불맛 가득한 달걀볶음밥!<br> 맛없으면 이상한 거죠~</button>
+            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">불맛 가득한 달걀볶음밥!</button>
          </div>
          <div class="main_recom_recipe mrr_frist">
             <iframe width="240" height="140" src="https://www.youtube.com/embed/wpUsg7f-F4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">초대손님 '양세형'님께서 '감자짜글이'를<br>만들어 주셨습니다. ㅋㅋ<br>진짜 밥도둑. 잡았다 요놈 </button>
+            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">진짜 밥도둑. 잡았다 요놈 </button>
          </div>
          
       </div>
       <div class="best_menu_wrap_hide">
          <div class="main_recom_recipe mrr_frist">
             <iframe width="240" height="140" src="https://www.youtube.com/embed/10fl2mebYHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">참 쉬운 김밥만들기,<br> 김밥 A~Z까지~!</button>
+            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">참 쉬운 김밥만들기</button>
          </div>
          <div class="main_recom_recipe mrr_frist">
             <iframe width="240" height="140" src="https://www.youtube.com/embed/R6IT_f0XPT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">강식당2 화제의 메뉴!<br> 김치밥이 피오씁니다 </button>
+            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">김치밥이 피오씁니다 </button>
          </div>
          <div class="main_recom_recipe mrr_frist">
             <iframe width="240" height="140" src="https://www.youtube.com/embed/47OIcvpqxlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -207,7 +213,7 @@
          </div>
          <div class="main_recom_recipe mrr_frist">
             <iframe width="240" height="140" src="https://www.youtube.com/embed/thXIVUt9PBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">이것이 업소 스케일! <br>백종원의 대용량 레시피 첫 번째, <br> 제육볶음 100인분 만들기</button>
+            <button type="button" class="best_link_but" onclick="location.href='videoClick.jsp'">제육볶음 100인분 만들기</button>
          </div>
       </div>   
       <div class="bmw_but_wrap">
@@ -259,6 +265,6 @@
       </div>
    </div>
 </main>
-	
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

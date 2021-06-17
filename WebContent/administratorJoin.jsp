@@ -550,7 +550,7 @@ function sample4_execDaumPostcode() {
 	      <input type="submit" class="join" value="가입하기">
 	      
 	    </form>
-	    
 	  </div>
+	  <%@ include file="footer.jsp"%>
 </body>
 </html>

@@ -191,5 +191,6 @@
 			<a href="메인페이지 연결" class="CSSbuttonLog">쇼핑계속하기</a>
 		</div>
 	</div>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

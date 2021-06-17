@@ -186,6 +186,7 @@
 			<p>
 				<input type="submit" class="join" value="Administrator Join" onclick="location.href='administratorJoin.jsp'">
 			</p>
+			<%@ include file="footer.jsp"%>
 	</div>     
 </body>
 </html>

@@ -253,5 +253,7 @@ function sample4_execDaumPostcode() {
 				</p>
 			  
 			    </div>
+			    <%@ include file="footer.jsp"%>
 </body>
+</html>
 
